@@ -7,17 +7,19 @@ Welcome to the public-facing version of the Marketing Decision Intelligence Syst
 
 This app enables users to:
 
-🔍 Filter by Region and Account Type to view tailored insights
+- 🔍 Filter by Region and Account Type to view tailored insights
 
-🧠 Uncover the best tactics to open and close opportunities
+- 🧠 Uncover the best tactics to open and close opportunities
 
-📈 Evaluate campaign effectiveness using ROI-driven analytics
+- 📈 Evaluate campaign effectiveness using ROI-driven analytics
 
-🤖 Get AI-assisted recommendations based on tactic mix, persona match, and performance tiers
+- 🤖 Get AI-assisted recommendations based on tactic mix, persona match, and performance tiers
 
-⚠️ All data within this project is synthetic and for demonstration purposes only.
+- ⚠️ All data within this project is synthetic and for demonstration purposes only.
 
-🚀 Features
+  
+
+## 🚀 Features
 ✅ Tab 1: Open Opportunities
 
 Discover the best marketing tactics and persona combinations to generate pipeline.
