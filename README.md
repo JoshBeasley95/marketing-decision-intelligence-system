@@ -1,7 +1,7 @@
-# Marketing Decision Intelligence System
+# 📊 Marketing Decision Intelligence System
 Streamlit app for marketing campaign insights
 
-📊 Marketing Decision Intelligence System
+
 
 Welcome to the public-facing version of the Marketing Decision Intelligence System — an interactive, AI-powered Streamlit application designed to help marketing teams analyze, optimize, and recommend high-impact campaigns using historical performance and account-level engagement data.
 
