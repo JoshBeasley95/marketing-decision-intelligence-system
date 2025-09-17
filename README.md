@@ -6,7 +6,7 @@ Welcome to the Marketing Decision Intelligence System — an interactive, AI-pow
 
 👉 Launch the app
 
-⚠️ All data within this project is synthetic and for demonstration purposes only.
+⚠️ *NOTE: All data within this project is synthetic and for demonstration purposes only.*
 
 
 ## 🎥 Watch the 1-Minute Demo
