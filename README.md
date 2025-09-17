@@ -1,4 +1,4 @@
-# marketing-decision-intelligence-system
+# Marketing Decision Intelligence System
 Streamlit app for marketing campaign insights
 
 📊 Marketing Decision Intelligence System
