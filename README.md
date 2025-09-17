@@ -13,7 +13,7 @@ Curious how the tool works? Check out this quick walkthrough:
 
 ## 📸 App Preview
 
-![Main Screenshot](screenshots/main_tabs.png)
+![App Preview](./app_preview.png)
 
 This app enables users to:
 
@@ -63,6 +63,15 @@ The app reads from a structured Excel file with multiple tabs: segment recommend
 2. **Streamlit UI**
 A clean, responsive user interface built in Streamlit
  for exploration and decision support.
+
+
+## 🧠 How the Recommendations Are Generated
+
+The recommendations in **Tab 1** are powered by a machine learning model trained on historical engagement and pipeline data.
+
+You can explore the full modeling pipeline and logic in this notebook:
+
+👉 [View the predictive_recommendations_model.ipynb](./predictive_recommendations_model.ipynb)
 
 
 ## 🧠 Data & Logic Highlights
