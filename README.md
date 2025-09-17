@@ -20,64 +20,57 @@ This app enables users to:
   
 
 ## 🚀 Features
-✅ Tab 1: Open Opportunities
+✅ **Tab 1: Open Opportunities**
 
-Discover the best marketing tactics and persona combinations to generate pipeline.
+- Discover the best marketing tactics and persona combinations to generate pipeline.
 
-Custom recommendations based on AI models for a chosen Region and Account Type.
+- Custom recommendations based on AI models for a chosen Region and Account Type.
 
-✅ Tab 2: Close Opportunities
+✅ **Tab 2: Close Opportunities**
 
-Analyze post-opportunity and won-stage tactics that help accelerate deals.
+- Analyze post-opportunity and won-stage tactics that help accelerate deals.
 
-Persona + tactic alignment based on historical closes.
+- Persona + tactic alignment based on historical closes.
 
-✅ Tab 3: Campaign Effectiveness
+✅ **Tab 3: Campaign Effectiveness**
 
-Explore which campaigns drove the most ROI.
+- Explore which campaigns drove the most ROI.
 
-View quadrant bubble charts by influence window (MGO, MIO, Won).
+- View quadrant bubble charts by influence window (MGO, MIO, Won).
 
-✅ Call to Action (bottom of Tab 3): Final Recommendations
+✅ **Call to Action (bottom of Tab 3): Final Recommendations**
 
-Automatically match your recommended tactic mix to top-performing campaigns.
+- Automatically match your recommended tactic mix to top-performing campaigns.
 
-Curated campaign picks for opening and/or closing opps — tailored by region, account type, and tactic strategy.
-
-📁 Repository Structure
-├── streamlit_app_synthetic_data.py              # Main app script
-├── requirements.txt              # Python dependencies
-├── README.md                     # This file
-├── marketing_decision_intelligence_system_data_synthetic.xlsx  # Synthetic dataset
-└── .gitignore                    # File exclusions
+- Curated campaign picks for opening and/or closing opps — tailored by region, account type, and tactic strategy.
 
 
-💡 How It Works
+## 💡 How It Works
 
-1. Synthetic Dataset
+1. **Synthetic Dataset**
 The app reads from a structured Excel file with multiple tabs: segment recommendations, account-level targeting, campaign-level performance, etc.
 
-2. Streamlit UI
+2. **Streamlit UI**
 A clean, responsive user interface built in Streamlit
  for exploration and decision support.
 
 
-🧠 Data & Logic Highlights
+## 🧠 Data & Logic Highlights
 
-Tier Labels (Invest, Refine, Reduce) determined by ROI score thresholds
+- **Tier Labels** (Invest, Refine, Reduce) determined by ROI score thresholds
 
-Persona and Tactic Recommendations vary by segment and funnel stage
+- **Persona and Tactic Recommendations** vary by segment and funnel stage
 
-Campaign Matching Logic includes mix fit, tactic alignment, and regional performance
+- **Campaign Matching Logic** includes mix fit, tactic alignment, and regional performance
 
 
-🚀 Try the App
+## 🚀 Try the App
 
 No setup required — just click the link below to launch the tool in your browser:
 
-👉 Launch the Marketing Decision Intelligence System
+- 👉 Launch the Marketing Decision Intelligence System
 
-⚠️ You may need to create a free Streamlit Cloud account to access the full functionality.
+- ⚠️ You may need to create a free Streamlit Cloud account to access the full functionality.
 
 💡 Optional: For Advanced Users
 
@@ -89,7 +82,7 @@ pip install -r requirements.txt
 streamlit run streamlit_app.py
 
 
-📬 Contact
+## 📬 Contact
 
 Built by Joshua Beasley
 Questions? Feedback? Reach out at texasjmb@gmail.com
