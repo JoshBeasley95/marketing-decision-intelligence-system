@@ -4,7 +4,7 @@ Streamlit app for marketing campaign insights
 
 Welcome to the Marketing Decision Intelligence System — an interactive, AI-powered Streamlit application designed to help marketing teams analyze, optimize, and recommend high-impact campaigns using historical performance and account-level engagement data.
 
-👉 Launch the Marketing Decision Intelligence System
+👉 Launch the app
 
 ⚠️ All data within this project is synthetic and for demonstration purposes only.
 
