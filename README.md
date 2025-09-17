@@ -25,7 +25,7 @@ This app enables users to:
 
 - Get AI-assisted recommendations based on tactic mix, persona match, and performance tiers
 
-- ⚠️ All data within this project is synthetic and for demonstration purposes only.
+⚠️ All data within this project is synthetic and for demonstration purposes only.
 
   
 
