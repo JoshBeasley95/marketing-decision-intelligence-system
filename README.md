@@ -75,10 +75,10 @@ No setup required — just click the link below to launch the tool in your brows
 
 If you'd prefer to run the app locally on your own machine:
 
-git clone https://github.com/your-username/marketing-decision-intelligence
-cd marketing-decision-intelligence
+git clone https://github.com/JoshBeasley95/marketing-decision-intelligence-system
+cd marketing-decision-intelligence-system
 pip install -r requirements.txt
-streamlit run streamlit_app.py
+streamlit run streamlit_app_synthetic_data.py
 
 
 ## 📬 Contact
