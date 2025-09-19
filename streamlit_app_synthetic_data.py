@@ -699,6 +699,20 @@ def main():
 
     # image_data = get_base64_image("Trend_T-Symbol_Extracted-removebg-preview.png")
 
+    st.markdown(
+        """
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <div style="flex: 1;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Marketing Decision Intelligence System</h1>
+                <p style="font-size: 1.1rem; color: #f0f0f0;">
+                    Make smarter marketing decisions by uncovering winning strategies, increasing conversion rates, and maximizing campaign ROI.
+                </p>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     # === Get Started Button Logic ===
     if "show_dashboard" not in st.session_state:
         st.session_state.show_dashboard = False
