@@ -106,5 +106,6 @@ streamlit run streamlit_app_synthetic_data.py
 ## Contact
 
 Built by Joshua Beasley
+
 Questions? Feedback? Reach out at texasjmb@gmail.com
  or connect on LinkedIn
