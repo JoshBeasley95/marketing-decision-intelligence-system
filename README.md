@@ -15,7 +15,7 @@ Curious how the tool works? Check out this quick walkthrough:
 
 👉 [Watch on Loom](https://www.loom.com/share/YOUR-VIDEO-LINK)
 
-## 📸 App Preview
+## App Preview
 
 ![App Preview](./app_preview.png)
 
@@ -31,7 +31,7 @@ This app enables users to:
 
   
 
-## 🚀 Features
+## Features
 ✅ **Tab 1: Open Opportunities**
 
 - Discover the best marketing tactics and persona combinations to generate pipeline.
@@ -67,7 +67,7 @@ A clean, responsive user interface built in Streamlit
  for exploration and decision support.
 
 
-## 🧠 How the Recommendations Are Generated
+## How the Recommendations Are Generated
 
 The recommendations in **Tab 1** are powered by a machine learning model trained on historical engagement and pipeline data.
 
@@ -76,7 +76,7 @@ You can explore the full modeling pipeline and logic in this notebook:
 👉 [View the predictive_recommendations_model.ipynb](./predictive_recommendations_model.ipynb)
 
 
-## 🧠 Data & Logic Highlights
+## Data & Logic Highlights
 
 - **Tier Labels** (Invest, Refine, Reduce) determined by ROI score thresholds
 
@@ -93,7 +93,7 @@ No setup required — just click the link below to launch the tool in your brows
 
 - ⚠️ You may need to create a free Streamlit Cloud account to access the full functionality.
 
-💡 Optional: For Advanced Users
+Optional: For Advanced Users
 
 If you'd prefer to run the app locally on your own machine:
 
@@ -103,7 +103,7 @@ pip install -r requirements.txt
 streamlit run streamlit_app_synthetic_data.py
 
 
-## 📬 Contact
+## Contact
 
 Built by Joshua Beasley
 Questions? Feedback? Reach out at texasjmb@gmail.com
