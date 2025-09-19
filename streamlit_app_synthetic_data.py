@@ -699,23 +699,6 @@ def main():
 
     # image_data = get_base64_image("Trend_T-Symbol_Extracted-removebg-preview.png")
 
-    st.markdown(
-        """
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
-            <div style="flex: 1;">
-                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Marketing Decision Intelligence System</h1>
-                <p style="font-size: 1.1rem; color: #f0f0f0;">
-                    Make smarter marketing decisions by uncovering winning strategies, increasing conversion rates, and maximizing campaign ROI.
-                </p>
-            </div>
-            <div style="font-size: 4rem; color: #39FF14;">
-                📊
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
     # === Get Started Button Logic ===
     if "show_dashboard" not in st.session_state:
         st.session_state.show_dashboard = False
@@ -1376,6 +1359,7 @@ def main():
 
             with f_col1:
                 selected_owner = st.selectbox("Account Owner", ["All"] + account_owners, key="owner_filter")
+
             with f_col2:
                 selected_engagement_range = st.slider(
                     "Recent Marketing Engagements (< 3 months)",
@@ -1384,9 +1368,13 @@ def main():
                     value=(min_eng, max_eng),
                     key="engagement_filter",
                 )
+
             with f_col3:
                 selected_clevel = st.multiselect(
-                    "C-Level Engaged? (< 3 months)", c_levels, default=c_levels, key="clevel_filter"
+                    "C-Level Engaged? (< 3 months)",
+                    c_levels,
+                    default=c_levels,
+                    key="clevel_filter"
                 )
 
             # Apply filters
@@ -1494,12 +1482,17 @@ def main():
                     unsafe_allow_html=True
                 )
 
+                region_options = ["All"] + sorted(campaign["Region"].dropna().unique().tolist())
+                default_region = st.session_state.get("region_filter", "All")
+
+                # Fallback if default not in options
+                if default_region not in region_options:
+                    default_region = "All"
+
                 selected_c_region = st.selectbox(
                     "",  # No label
-                    ["All"] + sorted(campaign["Region"].dropna().unique().tolist()),
-                    index=(["All"] + sorted(campaign["Region"].dropna().unique().tolist())).index(
-                        st.session_state.get("region_filter", "All")
-                    ),
+                    region_options,
+                    index=region_options.index(default_region),
                     key="campaign_region_ui"
                 )
 
