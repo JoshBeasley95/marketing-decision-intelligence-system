@@ -1375,13 +1375,31 @@ def main():
                 selected_owner = st.selectbox("Account Owner", ["All"] + account_owners, key="owner_filter")
 
             with f_col2:
-                selected_engagement_range = st.slider(
-                    "Recent Marketing Engagements (< 3 months)",
-                    min_value=min_eng,
-                    max_value=max_eng,
-                    value=(min_eng, max_eng),
-                    key="engagement_filter",
-                )
+                min_val = int(min_eng)
+                max_val = int(max_eng)
+
+                if min_val == max_val:
+                    # Only one possible value, so use number input instead of slider
+                    selected_engagement_range = (min_val, max_val)
+                    only_val = st.number_input(
+                        "Recent Marketing Engagements (< 3 months)",
+                        min_value=min_val,
+                        max_value=max_val,
+                        value=min_val,
+                        step=1,
+                        key="engagement_filter_num",
+                    )
+                    # Normalize to tuple for consistency
+                    selected_engagement_range = (only_val, only_val)
+                else:
+                    selected_engagement_range = st.slider(
+                        "Recent Marketing Engagements (< 3 months)",
+                        min_value=min_val,
+                        max_value=max_val,
+                        value=(min_val, max_val),
+                        step=1,
+                        key="engagement_filter",
+                    )
 
             with f_col3:
                 selected_clevel = st.multiselect(
