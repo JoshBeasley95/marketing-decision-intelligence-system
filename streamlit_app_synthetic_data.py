@@ -675,6 +675,9 @@ def create_bubble_chart(
 # Main Streamlit app
 ###############################################################################
 
+# Clear cache on startup (only for debugging / after data updates)
+st.cache_data.clear()
+
 def main():
     st.set_page_config(page_title="Marketing Decision Intelligence System", layout="wide", page_icon="📊")
 
