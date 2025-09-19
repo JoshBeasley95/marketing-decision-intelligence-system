@@ -1962,8 +1962,8 @@ def main():
                 dfm = rows.copy()
                 dfm["region_match"] = (selected_region == "All") | (dfm["Region"] == selected_region)
                 dfm["acct_match"] = (selected_acct == "All") | (dfm["Account Type"] == selected_acct)
-                dfm["intent_match"] = (dfm["Influence Window"] == "MGO") if intent == "MGO" else dfm[
-                    "Influence Window"].isin(["MIO", "Won"])
+                dfm["intent_match"] = (dfm["Influence Window"] == "Pre-Open Influence") if intent == "Pre-Open Influence" else dfm[
+                    "Influence Window"].isin(["Post-Open Influence", "Won"])
                 if preferred_ttypes is None:
                     preferred_ttypes = []
                 dfm["tactic_match"] = dfm["Tactic Type"].apply(lambda x: _any_ttype_match(x, preferred_ttypes))
@@ -2125,15 +2125,15 @@ def main():
                         "⚠️ Using default Recommended Mix because no exact Tab 1 row matched the current Region/Account Type/Persona.")
 
                 # --- OPEN (MGO) with tactic-type scoring ---
-                open_base = df_use[df_use["Influence Window"] == "MGO"]
+                open_base = df_use[df_use["Influence Window"] == "Pre-Open Influence"]
                 open_scored = compute_match_score(
-                    open_base, selected_region, selected_acct, intent="MGO", preferred_ttypes=open_types
+                    open_base, selected_region, selected_acct, intent="Pre-Open Influence", preferred_ttypes=open_types
                 )
                 open_picks = take_top_by_mix_unique(open_scored, mix_dict) \
                     .sort_values(["Match Score", "Total Opps"], ascending=False)
 
                 # --- CLOSE (MIO + Won) with tactic-type scoring ---
-                close_base = df_use[df_use["Influence Window"].isin(["MIO", "Won"])]
+                close_base = df_use[df_use["Influence Window"].isin(["Post-Open Influence", "Won"])]
                 # Preferred types come from Tab 2: selected pod if available, else union across region pods
                 by_pod = rec_types_by_pod(df2_pods, selected_region)  # OrderedDict[pod -> [types]]
                 if selected_pod and str(selected_pod) in by_pod:
@@ -2200,7 +2200,7 @@ def main():
                     "<h3><span style='color:#39FF14'>◆</span> Recommended Campaigns to Open Opps "
                     "<span title='You may see differences in tactic types here compared to Tab 1. "
                     "That’s because Tab 1 shows tactic types predicted by the AI model as most likely to open opps, "
-                    "while this list is based on actual historical MGO opp counts for your chosen segment.'>ℹ️</span></h3>",
+                    "while this list is based on actual historical opp counts for your chosen segment.'>ℹ️</span></h3>",
                     unsafe_allow_html=True
                 )
                 open_mix_value = ", ".join(f"{v} {k}" for k, v in mix_dict.items() if v > 0)
@@ -2209,7 +2209,7 @@ def main():
                     f"We select exactly the number of campaigns specified by Tab 1’s Recommended Mix ({open_mix_value})."
                 )
                 if open_picks.empty:
-                    st.info("No MGO-aligned campaigns found for the current filters.")
+                    st.info("No Pre-Open Influence-aligned campaigns found for the current filters.")
                 else:
                     open_items = [
                         f"<li><span style='color:#39FF14'><b>{r['Campaign']}</b></span> — {r['Tactic Type']}</li>"
@@ -2223,7 +2223,7 @@ def main():
                     "<h3><span style='color:#FF2400'>◆</span> Recommended Campaigns to Close Opps "
                     "<span title='You may see differences in tactic types here compared to Tab 2. "
                     "That’s because Tab 2 shows tactic types with the highest win rates overall, "
-                    "while this list is based on actual historical opp counts for MIO and Won opportunities.'>ℹ️</span></h3>",
+                    "while this list is based on actual historical opp counts for Post-Open Influence and Won opportunities.'>ℹ️</span></h3>",
                     unsafe_allow_html=True
                 )
                 st.caption(
