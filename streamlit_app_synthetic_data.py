@@ -1539,7 +1539,7 @@ def main():
                         .str.strip()
                     )
 
-                    pref_order = ["MGO", "MIO", "Won"]
+                    pref_order = ["Pre-Open Influence", "Post-Open Influence", "Won"]
                     unique_no_all = [v for v in vals.unique().tolist() if v != "All"]
                     unique_no_all = sorted(
                         unique_no_all,
@@ -1547,7 +1547,7 @@ def main():
                     )
                     stage_options = ["All"] + unique_no_all
                 else:
-                    stage_options = ["All", "MGO", "MIO", "Won"]
+                    stage_options = ["All", "Pre-Open Influence", "Post-Open Influence", "Won"]
 
                 # Label + tooltip icon
                 st.markdown(
