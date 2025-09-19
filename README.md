@@ -4,7 +4,7 @@ Streamlit app for marketing campaign insights
 
 Welcome to the Marketing Decision Intelligence System — an interactive, AI-powered Streamlit application designed to help marketing teams analyze, optimize, and recommend high-impact campaigns using historical performance and account-level engagement data.
 
-👉 [ Launch the app](https://marketing-decision-intelligence-system-tpb6grgdoffslvnyzbxh7x.streamlit.app/)
+👉 **[ Launch the app](https://marketing-decision-intelligence-system-tpb6grgdoffslvnyzbxh7x.streamlit.app/)**
 
 ⚠️ *NOTE: All data within this project is synthetic and for demonstration purposes only.*
 
@@ -48,7 +48,7 @@ This app enables users to:
 
 - Explore which campaigns drove the most ROI.
 
-- View quadrant bubble charts by influence window (MGO, MIO, Won).
+- View quadrant bubble charts by influence window (Pre-Open Influence, Post-Open Influence, Won).
 
 ✅ **Call to Action (bottom of Tab 3): Final Recommendations**
 
@@ -89,7 +89,7 @@ You can explore the full modeling pipeline and logic in this notebook:
 
 No setup required — just click the link below to launch the tool in your browser:
 
-- 👉 Launch the Marketing Decision Intelligence System
+- 👉 **[Launch the Marketing Decision Intelligence System](https://marketing-decision-intelligence-system-tpb6grgdoffslvnyzbxh7x.streamlit.app/)**
 
 - ⚠️ You may need to create a free Streamlit Cloud account to access the full functionality.
 
