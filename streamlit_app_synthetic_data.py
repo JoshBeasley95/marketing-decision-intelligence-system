@@ -1844,7 +1844,7 @@ def main():
 
             # --- Influence Window Title ---
             if selected_stage == "All":
-                influence_title = "All Influence Windows (Pre-Open Influence + Post-Open Influence + Won)"
+                influence_title = "All Influence Windows"
             else:
                 influence_title = f"{selected_stage} Campaigns"
 
