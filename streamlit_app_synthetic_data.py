@@ -675,8 +675,8 @@ def create_bubble_chart(
 # Main Streamlit app
 ###############################################################################
 
-# Clear cache on startup (only for debugging / after data updates)
-st.cache_data.clear()
+# Clear cache on startup (only for debugging / after data updates) -- ONLY USE THIS WHEN REUPLOADING EXCEL FILES TO PREVENT CACHING ISSUES
+# st.cache_data.clear()
 
 def main():
     st.set_page_config(page_title="Marketing Decision Intelligence System", layout="wide", page_icon="📊")
@@ -1557,7 +1557,7 @@ def main():
                     """
                     <div style="display: flex; align-items: center; margin-bottom: 4px;">
                         <span style="font-size: 15px;"><b>Influence Window</b></span>
-                        <span title="The timeframe in which marketing influenced an opportunity—before it opened (MGO), after it opened (MIO), or before it was closed-won."
+                        <span title="The timeframe in which marketing influenced an opportunity—before it opened, after it opened, or before it was closed-won."
                               style="margin-left: 6px; font-size: 14px; cursor: help;">
                             ℹ️
                         </span>
@@ -1807,7 +1807,7 @@ def main():
                         - 🟩 **Invest** = High ROI (high opp count and opp $, low cost)
                         - 🟨 **Refine** = Moderate ROI (medium opp count and opp $, medium cost) 
                         - 🟥 **Reduce** = Low ROI (low opp count and opp $, medium-high cost)
-                    - *Note: Tier Label is based on performance across All Influence Windows (MGO + MIO + Won).*
+                    - *Note: Tier Label is based on performance across All Influence Windows (Pre-Open Influence + Post-Open Influence + Won).*
                     """,
                     unsafe_allow_html=True
                 )
@@ -1844,7 +1844,7 @@ def main():
 
             # --- Influence Window Title ---
             if selected_stage == "All":
-                influence_title = "All Influence Windows (MGO + MIO + Won)"
+                influence_title = "All Influence Windows (Pre-Open Influence + Post-Open Influence + Won)"
             else:
                 influence_title = f"{selected_stage} Campaigns"
 
