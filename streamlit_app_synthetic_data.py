@@ -708,7 +708,8 @@ def main():
             <div style="flex: 1;">
                 <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Marketing Decision Intelligence System</h1>
                 <p style="font-size: 1.1rem; color: #f0f0f0;">
-                    Make smarter marketing decisions by uncovering winning strategies, increasing conversion rates, and maximizing campaign ROI.
+                    Make smarter marketing decisions by uncovering winning strategies, increasing conversion rates, and maximizing campaign ROI.<br>
+                    <em>Recommendations based on synthetic data used for demonstration purposes only.</em>
                 </p>
             </div>
         </div>
