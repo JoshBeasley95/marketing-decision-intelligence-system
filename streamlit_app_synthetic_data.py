@@ -2239,7 +2239,7 @@ def main():
             st.divider()
             col_btn, _ = st.columns([2, 3])  # make button a bit wider without full width
             with col_btn:
-                if st.button("Select to View Recommended Campaigns", key="view_recs_btn_tab3"):
+                if st.button("View Recommended Campaigns", key="view_recs_btn_tab3"):
                     st.session_state["show_recs_tab3"] = True
 
             if st.session_state.get("show_recs_tab3"):
