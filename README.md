@@ -13,7 +13,8 @@ Welcome to the Marketing Decision Intelligence System — an interactive, AI-pow
 
 Curious how the tool works? Check out this quick walkthrough:
 
-👉 [Watch on Loom](https://www.loom.com/share/YOUR-VIDEO-LINK)
+👉 [Watch on Loom]([https://www.loom.com/share/YOUR-VIDEO-LINK](https://www.loom.com/share/bf65947ee9c14b39a75fe0657adbf441?sid=d08054fb-75c3-4b09-9d47-b3a4c3ce3893
+))
 
 ## App Preview
 
